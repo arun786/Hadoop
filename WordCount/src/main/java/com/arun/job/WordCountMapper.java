@@ -37,9 +37,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
 			count++;
 		}
 
-		context.write(new Text(city), new IntWritable(count)); // this will be
-																// input for the
-																// Reducer.
+		context.write(new Text(city), new IntWritable(count)); // this will be input for the Reducer.
 		/*
 		 * for the above example, it will be Portland, 3 as the o/p for mapper
 		 */
