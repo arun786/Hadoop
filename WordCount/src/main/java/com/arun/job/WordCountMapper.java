@@ -27,7 +27,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
 		String line = value.toString();
 		String[] result = line.split(",");
 		String code = result[0]; // Code = OR
-		String city = result[1]; // City = Portland
+		String city = result[1].trim(); // City = Portland
 		String institute = result[2]; // Institute = abhyaas hadoop technology
 
 		StringTokenizer token = new StringTokenizer(institute);
