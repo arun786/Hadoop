@@ -1,0 +1,23 @@
+package com.arun.job;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+
+	@Override
+	protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, IntWritable>.Context context)
+			throws IOException, InterruptedException {
+
+		/*
+		 * Input in the value field will be as below where the first is code,
+		 * city and then the institute 
+		 * OR, Portland, abhyaas hadoop technology
+		 */
+	}
+
+}
